@@ -1,0 +1,350 @@
+//Variables
+$blue-ish: #33C1B8;
+$purple-ish: #0D0225;
+//universal calls
+*{
+    font-family: Tahoma, Arial, sans-serif;
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.sticky-menu{
+    width: 15vw;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid $blue-ish;
+    background: #fff;
+    margin: 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    & > .initials-box{
+        border-bottom: 3px solid $blue-ish;
+        padding: 15px 30px;
+        text-align: center;
+        & > h1{
+            display: block;
+            color: $blue-ish;
+            font-size: 3rem;
+        }
+    }
+    & > .menu-box{
+        border-bottom: 3px solid $blue-ish;
+        padding: 30px 15px;
+        padding-top: 50px;
+        text-align: center;
+        & > ul{
+            list-style: none;
+            padding-left: 0;
+            & > li{
+                display: block;
+                margin-bottom: 15px;
+                list-style: none;
+                padding-left: 0;
+                & > a{
+                    color: $purple-ish;
+                    font-weight: 700;
+                    &:hover{
+                        border-bottom: $blue-ish 3px solid;
+                    }
+                }
+            }
+        }
+        
+    }
+    & > .contact-label-box{
+        text-align: center;
+        padding: 15px 30px;
+        border-bottom: 3px solid $blue-ish;
+        & > a{
+            color: $purple-ish;
+            font-weight: 700;
+            &:hover{
+                border-bottom: $blue-ish 3px solid;
+            }
+        }
+    }
+    & > .contact-icon-box{
+        text-align: center;
+        padding: 30px 30px;
+        & > a i{
+            color: $blue-ish;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.back-button{
+    
+    position: fixed;
+    top: 30px;
+    left: 20vw;
+    & > .back{
+        & > a{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            line-height: 0.01;
+            & > i{
+                display: block;
+                color: $purple-ish;
+                font-size: 2.5rem;
+            }
+            & > p{
+                display: block;
+                color: $purple-ish;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.hero-image{
+    background: url(../img/didssph-PGNyuruIx1M-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    margin: 0 0;
+    justify-content: center;
+    margin-left: 15vw;
+    & > .overlay{
+        background: rgba(0,0,0,0.35);
+        width: 100%;
+        & > .hero-image-text{
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding-top: 20%;
+            & > h1{
+                font-size: 3rem;
+                display: block;
+                font-weight: 700;
+                color: #fff;
+            }
+            & > h3{
+                display: block;
+                font-weight: 700;
+                color: #fff;
+            }
+        }
+        & > .scroll-down-link{
+            display: block;
+            text-align: center;
+            margin-top: 85px;
+            margin-bottom: 30px;
+            & > a{
+                display: inline-block;
+                font-weight: 700;
+                color: white;
+                text-decoration: none;
+                & > p{
+                    display: block;
+
+                }
+                & > i{
+                    display: block;
+                    transition: transform .3s;
+                }
+                &:hover{
+                    & > i{
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: row;
+    margin: 40px auto;
+    margin-left: 20vw;
+    flex-wrap: wrap;
+    & > .folio-card{
+        width: 25%;
+        height: 250px;
+        margin: 5px 15px;
+        &:first-child{
+            margin-left: 0px;
+        }
+        &:nth-of-type(4n + 0)
+        {
+            margin-left: 0px;
+        }
+        & > a{
+            & > img{
+                width: 100%;
+                border-radius: 3px;
+                transition: box-shadow .3s, opacity .3s;
+            }
+            & > h2{
+                font-size: 1.2rem;
+                color: $purple-ish;
+                transition: opacity .3s;
+            }
+            & > p{
+                color: $purple-ish;
+                font-size: 0.8rem;
+                transition: opacity .3s;
+                & > i{
+                    color: $purple-ish;
+                    font-size: 0.8rem;
+                    transition: transform 0.3s ease-out, opacity .3s;
+                }
+            }
+            &:hover{
+                & > img{
+                    box-shadow: 5px 5px 10px 5px #aaa;
+                opacity: 0.75;
+                }
+                
+                & > h2, p{
+                    opacity: 0.75;
+                    & > i{
+                        opacity: 0.75;
+                        transform: translateX(5px);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    & > .info-box{
+        display: block;
+        width: 25%;
+        & > *{
+            color: $purple-ish;
+        }
+    }
+    & > .form-box{
+        display: block;
+        width: 65%;
+        margin-left: 30px;
+        & > form{
+            & > #first-name, #last-name{
+                width:45%;
+                margin-right: 0px;
+            }
+            & > #email, #subject, #message{
+                width: 100%;
+            }
+            & > input{
+                background: #ccc;
+                border: none;
+                border-radius: 3px;
+                height: 20px;
+                margin: 5px 0px;
+                padding: 15px 15px;
+            }
+            & > textarea{
+                height: 75px;
+                margin: 15px 0px;
+                padding: 15px 15px;
+                background: #ccc;
+                border: none;
+                border-radius: 3px;
+                resize: none;
+            }
+        }
+        & > button{
+            margin-left: 0px;
+            border: 1px solid $purple-ish;
+            color: $purple-ish;
+            border-radius: 3px;
+            height: 40px;
+            width: 80px;
+            padding: 10px 15px;
+            text-align: center;
+            vertical-align: center;
+            &:hover{
+                background:$purple-ish;
+                color: #fff;
+            }
+        }
+    }
+    
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
+    margin-left: 15vw;
+    & > .to-top{
+        display: block;
+        margin: 30px auto;
+        
+        & > a{
+            display: inline-block;
+            text-align: center;
+            font-weight: 700;
+            text-decoration: none;
+            & > i{
+                color: $purple-ish;
+                transition: transform .3s;
+            }
+            & > p{
+                color: $purple-ish;
+            }
+            &:hover{
+                & > i{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+.internal-section{
+    background: url(../img/didssph-PGNyuruIx1M-unsplash.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 15vw;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    & > .text-block{
+        & *{
+            color: $purple-ish;
+        }
+        border: 5px solid $blue-ish;
+        background: #fff;
+        width: 80%;
+        margin: 50px 30px;
+        display: block;
+        padding: 15px 30px;
+        border-radius: 3px;
+        & > p{
+            & > .dropcap{
+                float: left;
+                font-size: 60px;
+                line-height: 35px;
+                padding-top: 10px;
+                padding-right: 8px;
+                padding-left: 3px;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
