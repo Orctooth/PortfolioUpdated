@@ -1,0 +1,177 @@
+//Navigation menu queries.
+@media only screen and (max-width: 425px) {
+    
+    .hero-image{
+        & > .overlay{
+            & > .hero-image-text{
+                & > h1{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .portfolio{
+        margin-left: 15px;
+        & > .folio-card{
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+
+    .contact-form{
+        margin-left: 15px;
+        flex-wrap: wrap;
+        & > .info-box{
+            width: 100%;
+            margin: 0 auto;
+        }
+        & > .form-box{
+            width: 100%;
+            margin: 0 auto;
+            & > form{
+                & > input, textarea{
+                    max-width: 80%;
+                }
+                
+            }
+        }
+    }
+
+    .internal-section{
+        & > .text-block{
+            margin: 0 auto;
+            width: 70%;
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 425px) {
+    
+    .portfolio{
+        & > .folio-card{
+            width: 80%;
+            
+            
+        }
+        margin-left: 40vw;
+        
+    }
+
+    .hero-image{
+        & > .overlay{
+            & > .hero-image-text{
+               margin: 0 auto;
+                & > h1{
+                    font-size: 2.5rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+        margin-left: 150px;
+    }
+
+    .contact-form{
+        margin-left: 200px;
+        flex-wrap: wrap;
+        & > .info-box{
+            width: 100%;
+            margin: 0 auto;
+        }
+        & > .form-box{
+            width: 100%;
+            margin: 0 auto;
+            & > form{
+                & > input, textarea{
+                    max-width: 80%;
+                }
+                
+            }
+        }
+    }
+
+    .internal-section{
+       
+        & > .text-block{
+            width: 60%;
+            margin: 0 auto;
+            
+        }
+    }
+    
+}
+@media only screen and (max-width: 786px){
+    .hero-image, .portfolio, .contact-form, .foot, .internal-section{
+        margin: 0 auto;
+    }
+
+    .portfolio{
+        margin-left: 10vw;
+    }
+
+    .contact-form{
+        margin-left: 10vw;
+    }
+
+
+    .sticky-menu{
+        display: none;
+    }
+
+    
+}
+
+@media only screen and (min-width: 786px) {
+    
+    .sticky-menu{
+        display: fixed;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+    
+    
+    
+    .portfolio{
+        & > .folio-card{
+            width: 40%;
+        }
+        margin-left: 25vw;
+    }
+
+    .contact-form{
+        & > .info-box{
+            width: 25%;
+            
+        }
+        & > .form-box{
+            width: 60%;
+            & > form{
+                & > #last-name{
+                    width: 35%;
+                }
+                & > #first-name{
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .portfolio{
+        & > .folio-card{
+            width: 25%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .portfolio{
+        & > .folio-card{
+            width: 25%;
+        }
+    }
+}

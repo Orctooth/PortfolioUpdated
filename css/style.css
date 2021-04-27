@@ -1,5 +1,8 @@
 * {
   font-family: Tahoma, Arial, sans-serif;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
 }
 * a {
   text-decoration: none;
@@ -8,15 +11,29 @@
   list-style: none;
   padding-left: 0;
 }
+* input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+* input[type=email]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+* textarea {
+  overflow: auto;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 .sticky-menu {
-  width: 15vw;
-  height: 100vw;
+  min-width: 120px;
+  min-height: 100vh;
   display: flex;
+  z-index: 2;
   flex-direction: column;
   border: 3px solid #33C1B8;
   background: #fff;
@@ -108,18 +125,23 @@ html {
   height: 100vh;
   display: flex;
   margin: 0 0;
+  margin-top: -15px;
   justify-content: center;
   margin-left: 15vw;
 }
 .hero-image > .overlay {
   background: rgba(0, 0, 0, 0.35);
   width: 100%;
+  position: relative;
+  padding: 40px 30px;
+  padding-top: 150px;
+  padding-bottom: 30px;
 }
 .hero-image > .overlay > .hero-image-text {
   text-align: center;
   display: block;
-  width: 100%;
-  padding-top: 20%;
+  width: 80%;
+  margin: 30px auto;
 }
 .hero-image > .overlay > .hero-image-text > h1 {
   font-size: 3rem;
@@ -134,9 +156,8 @@ html {
 }
 .hero-image > .overlay > .scroll-down-link {
   display: block;
+  padding-top: 10%;
   text-align: center;
-  margin-top: 85px;
-  margin-bottom: 30px;
 }
 .hero-image > .overlay > .scroll-down-link > a {
   display: inline-block;
@@ -155,23 +176,66 @@ html {
   transform: translateY(5px);
 }
 
+.mobile-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px auto;
+}
+.mobile-nav > a {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
+}
+.mobile-nav > a > .nav-card {
+  background-color: #fff;
+  height: 100px;
+  text-align: center;
+  padding: 20px 15px;
+  padding-bottom: 0px;
+  border: 1px solid #0D0225;
+  border-radius: 3px;
+}
+.mobile-nav > a > .nav-card > i {
+  display: inline-block;
+  color: #0D0225;
+  position: relative;
+}
+.mobile-nav > a > .nav-card > i::after {
+  content: " ";
+  width: 100%;
+  height: 3px;
+  background: #0D0225;
+  position: absolute;
+  top: 150%;
+  left: 0%;
+}
+.mobile-nav > a > .nav-card > h3 {
+  display: block;
+  color: #0D0225;
+}
+.mobile-nav > a > .nav-card:hover {
+  background: #0D0225;
+  box-shadow: 10px 10px 10px #ccc;
+}
+.mobile-nav > a > .nav-card:hover > i, .mobile-nav > a > .nav-card:hover h3 {
+  color: #fff;
+}
+.mobile-nav > a > .nav-card:hover > i::after, .mobile-nav > a > .nav-card:hover h3::after {
+  background: #fff;
+}
+
 .portfolio {
   display: flex;
   flex-direction: row;
   margin: 40px auto;
-  margin-left: 20vw;
+  margin-left: 30vw;
   flex-wrap: wrap;
 }
 .portfolio > .folio-card {
   width: 25%;
-  height: 250px;
-  margin: 5px 15px;
-}
-.portfolio > .folio-card:first-child {
-  margin-left: 0px;
-}
-.portfolio > .folio-card:nth-of-type(4n + 0) {
-  margin-left: 0px;
+  margin: 15px 15px;
 }
 .portfolio > .folio-card > a > img {
   width: 100%;
@@ -223,7 +287,7 @@ html {
   margin-left: 30px;
 }
 .contact-form > .form-box > form > #first-name, .contact-form > .form-box > form #last-name {
-  width: 45%;
+  width: 30%;
   margin-right: 0px;
 }
 .contact-form > .form-box > form > #email, .contact-form > .form-box > form #subject, .contact-form > .form-box > form #message {
@@ -256,6 +320,7 @@ html {
   padding: 10px 15px;
   text-align: center;
   vertical-align: center;
+  background: none;
 }
 .contact-form > .form-box > button:hover {
   background: #0D0225;
@@ -264,8 +329,12 @@ html {
 
 .foot {
   display: flex;
-  justify-content: center;
   margin-left: 15vw;
+}
+@media screen and (-ms-high-contrast: active) {
+  .foot {
+    margin-left: 50vw;
+  }
 }
 .foot > .to-top {
   display: block;
@@ -289,20 +358,17 @@ html {
 }
 
 .internal-section {
-  background: url(../img/didssph-PGNyuruIx1M-unsplash.jpg);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
   margin-left: 15vw;
   display: flex;
   align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 30px 30px;
 }
 .internal-section > .text-block {
   border: 5px solid #33C1B8;
   background: #fff;
   width: 80%;
+  height: 100%;
   margin: 50px 30px;
   display: block;
   padding: 15px 30px;
@@ -319,6 +385,137 @@ html {
   padding-right: 8px;
   padding-left: 3px;
   padding-bottom: 0;
+}
+
+@media only screen and (max-width: 425px) {
+  .hero-image > .overlay > .hero-image-text > h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio {
+    margin-left: 15px;
+  }
+  .portfolio > .folio-card {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .contact-form {
+    margin-left: 15px;
+    flex-wrap: wrap;
+  }
+  .contact-form > .info-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact-form > .form-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact-form > .form-box > form > input, .contact-form > .form-box > form textarea {
+    max-width: 80%;
+  }
+
+  .internal-section > .text-block {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .portfolio {
+    margin-left: 40vw;
+  }
+  .portfolio > .folio-card {
+    width: 80%;
+  }
+
+  .hero-image {
+    margin-left: 150px;
+  }
+  .hero-image > .overlay > .hero-image-text {
+    margin: 0 auto;
+  }
+  .hero-image > .overlay > .hero-image-text > h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    margin-left: 200px;
+    flex-wrap: wrap;
+  }
+  .contact-form > .info-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact-form > .form-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact-form > .form-box > form > input, .contact-form > .form-box > form textarea {
+    max-width: 80%;
+  }
+
+  .internal-section > .text-block {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 786px) {
+  .hero-image, .portfolio, .contact-form, .foot, .internal-section {
+    margin: 0 auto;
+  }
+
+  .portfolio {
+    margin-left: 10vw;
+  }
+
+  .contact-form {
+    margin-left: 10vw;
+  }
+
+  .sticky-menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 786px) {
+  .sticky-menu {
+    display: fixed;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .portfolio {
+    margin-left: 25vw;
+  }
+  .portfolio > .folio-card {
+    width: 40%;
+  }
+
+  .contact-form > .info-box {
+    width: 25%;
+  }
+  .contact-form > .form-box {
+    width: 60%;
+  }
+  .contact-form > .form-box > form > #last-name {
+    width: 35%;
+  }
+  .contact-form > .form-box > form > #first-name {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .portfolio > .folio-card {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .portfolio > .folio-card {
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
