@@ -34,6 +34,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    margin: 0 0;
+}
+
 .sticky-menu{
     //width: 15vw;
     min-width: 120px;
@@ -135,18 +139,20 @@ html{
     height: 100vh;
     display: flex;
     margin: 0 0;
-    margin-top: -15px;
     justify-content: center;
     margin-left: 15vw;
     
     & > .overlay{
         background: rgba(0,0,0,0.35);
         width: 100%;
-        position: relative;
         padding: 40px 30px;
         padding-top: 150px;
         padding-bottom: 30px;
+        position: relative;
         & > .hero-image-text{
+            position: absolute;
+            top: 20vh;
+            left: 10%;
             text-align: center;
             display: block;
             width: 80%;
@@ -165,7 +171,9 @@ html{
         }
         & > .scroll-down-link{
             display: block;
-            padding-top: 10%;
+            position: absolute;
+            top: 80vh;
+            left: 45%;
             text-align: center;
             
             & > a{
@@ -313,14 +321,13 @@ html{
         width: 65%;
         margin-left: 30px;
         & > form{
-            & > #first-name, #last-name{
-                width:30%;
-                margin-right: 0px;
+            & > .first-last{
+                width: 100%;
             }
             & > #email, #subject, #message{
                 width: 100%;
             }
-            & > input{
+            & > input, .first-last input{
                 background: #ccc;
                 border: none;
                 border-radius: 3px;

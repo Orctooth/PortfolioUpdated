@@ -30,7 +30,7 @@
             width: 100%;
             margin: 0 auto;
             & > form{
-                & > input, textarea{
+                & > input, textarea, .first-last{
                     max-width: 80%;
                 }
                 
@@ -86,6 +86,9 @@
                 & > input, textarea{
                     max-width: 80%;
                 }
+                & > .first-last{
+                    width: 80%;
+                }
                 
             }
         }
@@ -125,7 +128,7 @@
 @media only screen and (min-width: 786px) {
     
     .sticky-menu{
-        display: fixed;
+        display: flex;
     }
 
     .mobile-nav{
@@ -148,14 +151,6 @@
         }
         & > .form-box{
             width: 60%;
-            & > form{
-                & > #last-name{
-                    width: 35%;
-                }
-                & > #first-name{
-                    width: 35%;
-                }
-            }
         }
     }
 }
