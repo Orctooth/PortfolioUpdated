@@ -157,12 +157,34 @@ body{
             display: block;
             width: 80%;
             margin: 30px auto;
+            
             & > h1{
                 font-size: 3rem;
                 display: block;
                 font-weight: 700;
                 color: #fff;
+                
+                @keyframes blink {
+                    from {
+                      opacity: 1;
+                    }
+                  
+                    to {
+                      opacity: 0;
+                    }
+                }
+                  
+                & > .typing{
+                    animation-duration: 0.5s;
+                    animation-timing-function: cubic-bezier(1,0,0,1);
+                    animation-name: blink;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+                
             }
+
+            
             & > h3{
                 display: block;
                 font-weight: 700;
