@@ -287,12 +287,36 @@ body{
         width: 25%;
         margin: 15px 15px;
         
+        
         & > a{
-            & > img{
-                width: 100%;
-                border-radius: 3px;
-                transition: box-shadow .3s, opacity .3s;
+            
+            & > .picture{
+                overflow: hidden;
+                position: relative;
+                z-index: -1;
+                & > img{
+                    width: 100%;
+                    position: relative;
+                    z-index: -2;
+                    border-radius: 3px;
+                    transition: box-shadow .3s, opacity .3s, transform .3s;
+                }
+                & > .pop-up{
+                    visibility: hidden;
+                    position: absolute;
+                    transition: transform, 0.3s;
+                    top: 100%;
+                    padding: 15px 15px;
+                    left: 0;
+                    z-index: 1;
+                    background: hsla(0,0,0,0.5);
+                    & > p{
+                        font-size: 0.8rem;
+                        color: #fff;
+                    }
+                }
             }
+            
             & > h2{
                 font-size: 1.2rem;
                 color: $purple-ish;
@@ -308,11 +332,21 @@ body{
                     transition: transform 0.3s ease-out, opacity .3s;
                 }
             }
+            
             &:hover{
-                & > img{
-                    box-shadow: 5px 5px 10px 5px #aaa;
-                opacity: 0.75;
+                & > .picture{
+                    & > img{
+                        box-shadow: 5px 5px 10px 5px #aaa;
+                        opacity: 0.75;
+                        transform: scale(1.2);
+                    }
+                    & > .pop-up{
+                        visibility: visible;
+                        transform: translateY(-100%);
+    
+                    }
                 }
+               
                 
                 & > h2, p{
                     opacity: 0.75;
@@ -343,8 +377,19 @@ body{
         width: 65%;
         margin-left: 30px;
         & > form{
+            width: 100%;
             & > .first-last{
+                display: flex;
                 width: 100%;
+                padding: 0 0;
+                align-items: stretch;
+                & > input{
+                    min-width: 40%;
+                    &:last-of-type{
+                        margin-left: auto;
+                        margin-right: -30px;
+                    }
+                }
             }
             & > #email, #subject, #message{
                 width: 100%;

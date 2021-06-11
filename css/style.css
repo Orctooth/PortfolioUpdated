@@ -260,10 +260,31 @@ body {
   width: 25%;
   margin: 15px 15px;
 }
-.portfolio > .folio-card > a > img {
+.portfolio > .folio-card > a > .picture {
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.portfolio > .folio-card > a > .picture > img {
   width: 100%;
+  position: relative;
+  z-index: -2;
   border-radius: 3px;
-  transition: box-shadow 0.3s, opacity 0.3s;
+  transition: box-shadow 0.3s, opacity 0.3s, transform 0.3s;
+}
+.portfolio > .folio-card > a > .picture > .pop-up {
+  visibility: hidden;
+  position: absolute;
+  transition: transform, 0.3s;
+  top: 100%;
+  padding: 15px 15px;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.portfolio > .folio-card > a > .picture > .pop-up > p {
+  font-size: 0.8rem;
+  color: #fff;
 }
 .portfolio > .folio-card > a > h2 {
   font-size: 1.2rem;
@@ -280,9 +301,14 @@ body {
   font-size: 0.8rem;
   transition: transform 0.3s ease-out, opacity 0.3s;
 }
-.portfolio > .folio-card > a:hover > img {
+.portfolio > .folio-card > a:hover > .picture > img {
   box-shadow: 5px 5px 10px 5px #aaa;
   opacity: 0.75;
+  transform: scale(1.2);
+}
+.portfolio > .folio-card > a:hover > .picture > .pop-up {
+  visibility: visible;
+  transform: translateY(-100%);
 }
 .portfolio > .folio-card > a:hover > h2, .portfolio > .folio-card > a:hover p {
   opacity: 0.75;
@@ -309,8 +335,21 @@ body {
   width: 65%;
   margin-left: 30px;
 }
-.contact-form > .form-box > form > .first-last {
+.contact-form > .form-box > form {
   width: 100%;
+}
+.contact-form > .form-box > form > .first-last {
+  display: flex;
+  width: 100%;
+  padding: 0 0;
+  align-items: stretch;
+}
+.contact-form > .form-box > form > .first-last > input {
+  min-width: 40%;
+}
+.contact-form > .form-box > form > .first-last > input:last-of-type {
+  margin-left: auto;
+  margin-right: -30px;
 }
 .contact-form > .form-box > form > #email, .contact-form > .form-box > form #subject, .contact-form > .form-box > form #message {
   width: 100%;
@@ -434,8 +473,11 @@ body {
     width: 100%;
     margin: 0 auto;
   }
-  .contact-form > .form-box > form > input, .contact-form > .form-box > form textarea, .contact-form > .form-box > form .first-last {
+  .contact-form > .form-box > form > input, .contact-form > .form-box > form textarea {
     max-width: 80%;
+  }
+  .contact-form > .form-box > form > .first-last {
+    display: block;
   }
 
   .internal-section > .text-block {
