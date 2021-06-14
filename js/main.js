@@ -7,10 +7,31 @@
 $('.typed').typeWrite({
     repeat: true,
     interval: 4000,
-    speed: 8000,
+    speed: 20,
     color: "#fff"
 });
 
-document.querySelectorAll('.folio-link').addEventListener('mouseover', function(){
+document.addEventListener(
+    "DOMContentLoaded", () => {
+        const menu = new Mmenu( "#my-menu", {
+            "extensions": ["pagedim-black"],
+            navbar: {
+              add: false
+            },
+        } );
 
+       
+
+        const api = menu.API;
+        document.querySelector(".hamburger").addEventListener("click", function (evnt) {
+        evnt.preventDefault();
+        api.open();
+        document.querySelector('.hamburger').classList.toggle("is-active");
+        document.querySelector('.sticky-nav').style.display ="block";
+    
 });
+        
+        
+    }
+    
+);

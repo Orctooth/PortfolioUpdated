@@ -2,94 +2,115 @@
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/asidestyles.css">
+    <link rel="stylesheet" href="../css/mmenu.css">
+    <link href="../css/hamburgers.css" rel="stylesheet">
     <title>Harry Welchman's Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
     <script src="https://kit.fontawesome.com/886eae3fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="sticky-menu">
-        <div class="initials-box">
-            <h1>HW</h1>
-        </div>
-        <div class="menu-box">
-            <ul>
-                <li>
-                    <a>About Me</a>
-                </li>
-                <li>
-                    <a href="../index.html#folio">My Portfolio</a>
-                </li>
-                <li>
-                    <a href="coding.html">Coding Examples</a>
+    <nav id="my-menu">
+        <ul class="sticky-menu sticky-nav">
+            <li class="initials-box">
+                <h1><a href="">HW</a></h1>
+            </li>
+            <li class="menu-box">
+                <ul class="Inset">
+                    <li>
+                        <a href="html/about.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#folio">My Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="html/coding.html">Coding Examples</a>
 
-                </li>
-                <li>
-                    <a href="scsscheme.html">SCS Scheme</a>
+                    </li>
+                    <li>
+                        <a href="html/scsscheme.html">SCS Scheme</a>
 
-                </li>
-            </ul>
-            
-            
-        </div>
-        <div class="contact-label-box">
-            <a href="../index.html#contact">Contact Me</a>
-        </div>
-        <div class="contact-icon-box">
-            <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </section>
+                    </li>
+                </ul>
+                
+                
+            </li>
+            <li class="contact-label-box">
+                <a href="#contact">Contact Me</a>
+            </li>
+            <li class="contact-icon-box">
+                <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
 
-    <!-- <div class="back-button">
-        <div class="back">
-            <a href="../index.html">
-                <i class="fas fa-chevron-left"></i>
-                <p>BACK</p>
-            </a>
-        </div>
+    </nav>
 
-    </div> -->
+    <div id="my-page">
 
-    <section class="about internal-section">
-        <div class="text-block about-block">
-            <h1>About Me</h1>
-            <p><span class="dropcap">I</span> am a games computing graduate currently participating in the scion scheme web development course with Netmatters. While I've yet to start my first professional position in games or web development, I have already learned a great deal of programming and design techniques in both practices, and my aim is to continue building upon these skills.</p>
-            <p>Outside of the work world I like to unwind by playing interesting indie games and from time to time I will participate in game jams. I also like to tinker around with chiptune composition using tools based off of old games console sound kits.</p>
-            <p>My experiences with programming cover the use of C#, C++, JavaScript and Python. My markup language toolset includes HTML, CSS and SASS. I am also experienced in using Unity Game Engine for games development. I graduated from university last year with a 2:2 bachelor's degree in games computing.</p>
+        <div id="burger-button">
+            <button class="hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
 
-    </section>
-
-    <section class="mobile-nav">
-        <a href="about.html">
-            <div class="nav-card">
-                <i class="fas fa-user-alt"></i>
-                <h3>About Me</h3>
+        <section class="sticky-menu">
+            <div class="initials-box">
+                <h1>HW</h1>
             </div>
-        </a>
-
-        <a href="../index.html#folio">
-            <div class="nav-card">
-                <i class="fas fa-folder-open"></i>
-                <h3>Portfolio</h3>
+            <div class="menu-box">
+                <ul>
+                    <li>
+                        <a>About Me</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#folio">My Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="coding.html">Coding Examples</a>
+    
+                    </li>
+                    <li>
+                        <a href="scsscheme.html">SCS Scheme</a>
+    
+                    </li>
+                </ul>
+                
+                
             </div>
-        </a>
-
-       <a href="coding.html">
-            <div class="nav-card">
-                <i class="fas fa-code"></i>
-                <h3>Coding Examples</h3>
+            <div class="contact-label-box">
+                <a href="../index.html#contact">Contact Me</a>
             </div>
-       </a>
-
-       <a href="scsscheme.html">
-            <div class="nav-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>SCS Scheme</h3>
+            <div class="contact-icon-box">
+                <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
             </div>
-       </a>
+        </section>
+    
+        <section class="about internal-section">
+            <div class="text-block about-block">
+                <h1>About Me</h1>
+                <p><span class="dropcap">I</span> am a games computing graduate currently participating in the scion scheme web development course with Netmatters. While I've yet to start my first professional position in games or web development, I have already learned a great deal of programming and design techniques in both practices, and my aim is to continue building upon these skills.</p>
+                <p>Outside of the work world I like to unwind by playing interesting indie games and from time to time I will participate in game jams. I also like to tinker around with chiptune composition using tools based off of old games console sound kits.</p>
+                <p>My experiences with programming cover the use of C#, C++, JavaScript and Python. My markup language toolset includes HTML, CSS and SASS. I am also experienced in using Unity Game Engine for games development. I graduated from university last year with a 2:2 bachelor's degree in games computing.</p>
+            </div>
+    
+        </section>
+    
+    
+    </div>
+
+    <script src="../js/jquery.slim.js"></script>
+    <script src="../js/mmenu.polyfills.js"></script>
+    <script src="../js/mmenu.js"></script>
+    <script src="../js/main.js"></script>
 
 
-    </section>
+
 
 </body>

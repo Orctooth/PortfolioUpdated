@@ -61,6 +61,8 @@
         
     }
 
+
+
     .hero-image{
         & > .overlay{
             & > .hero-image-text{
@@ -85,11 +87,11 @@
             width: 100%;
             margin: 0 auto;
             & > form{
-                & > input, textarea{
+                width: 100%;                & > input, textarea{
                     max-width: 80%;
                 }
                 & > .first-last{
-                    width: 80%;
+                    max-width: 80%;
                 }
                 
             }
@@ -119,7 +121,7 @@
         margin-left: 10vw;
     }
 
-
+    
     .sticky-menu{
         display: none;
     }
@@ -134,6 +136,10 @@
     }
 
     .mobile-nav{
+        display: none;
+    }
+
+    #burger-button{
         display: none;
     }
     

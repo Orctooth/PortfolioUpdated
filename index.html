@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        
         <link rel="stylesheet" href="css/cursor.css">
+        <link rel="stylesheet" href="css/mmenu.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="css/hamburgers.css" rel="stylesheet">
         <title>Harry Welchman's Portfolio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
@@ -14,231 +17,285 @@
         <!-- Hero-image background photo by <a href="https://unsplash.com/@didsss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Didssph</a> on <a href="https://unsplash.com/t/textures-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
     </head>
     <body>
-        <section class="sticky-menu">
-            <div class="initials-box">
-                <h1>HW</h1>
-            </div>
-            <div class="menu-box">
-                <ul>
-                    <li>
-                        <a href="html/about.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#folio">My Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="html/coding.html">Coding Examples</a>
-
-                    </li>
-                    <li>
-                        <a href="html/scsscheme.html">SCS Scheme</a>
-
-                    </li>
-                </ul>
-                
-                
-            </div>
-            <div class="contact-label-box">
-                <a href="#contact">Contact Me</a>
-            </div>
-            <div class="contact-icon-box">
-                <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </section>
-
-        <section class="hero-image" id="top-hotspot">
-            <div class="overlay">
-                <div class="hero-image-text">
-                    <h1 id="title">My Name is Harry Welchman</h1>
-                    <h3 class="typed">I'm a web developer</h3>
-                </div>
+        <nav id="my-menu">
+            <ul class="sticky-menu sticky-nav">
+                <li class="initials-box">
+                    <h1><a href="">HW</a></h1>
+                </li>
+                <li class="menu-box">
+                    <ul class="Inset">
+                        <li>
+                            <a href="html/about.html">About Me</a>
+                        </li>
+                        <li>
+                            <a href="#folio">My Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="html/coding.html">Coding Examples</a>
     
-                <div class="scroll-down-link">
-                    <a href="#folio">
-                        <p>Scroll Down</p>
-                        <i class="fas fa-chevron-down"></i>
+                        </li>
+                        <li>
+                            <a href="html/scsscheme.html">SCS Scheme</a>
+    
+                        </li>
+                    </ul>
+                    
+                    
+                </li>
+                <li class="contact-label-box">
+                    <a href="#contact">Contact Me</a>
+                </li>
+                <li class="contact-icon-box">
+                    <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+    
+        </nav>
+        
+        
+        <div id="my-page">
+            <div id="burger-button">
+                <button class="hamburger hamburger--elastic" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            
+            
+            
+            
+            <section class="sticky-menu">
+                <div class="initials-box">
+                    <h1><a href="">HW</a></h1>
+                </div>
+                <div class="menu-box">
+                    <ul>
+                        <li>
+                            <a href="html/about.html">About Me</a>
+                        </li>
+                        <li>
+                            <a href="#folio">My Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="html/coding.html">Coding Examples</a>
+    
+                        </li>
+                        <li>
+                            <a href="html/scsscheme.html">SCS Scheme</a>
+    
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+                <div class="contact-label-box">
+                    <a href="#contact">Contact Me</a>
+                </div>
+                <div class="contact-icon-box">
+                    <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
+                </div>
+            </section>
+    
+            <section class="hero-image" id="top-hotspot">
+                <div class="overlay">
+                    <div class="hero-image-text">
+                        <h1 id="title">My Name is Harry Welchman</h1>
+                        <h3 class="typed">I'm a web developer</h3>
+                    </div>
+        
+                    <div class="scroll-down-link">
+                        <a href="#folio">
+                            <p>Scroll Down</p>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </section>
+    
+            <!-- <section class="mobile-nav">
+                <a href="html/about.html">
+                    <div class="nav-card">
+                        <i class="fas fa-user-alt"></i>
+                        <h3>About Me</h3>
+                    </div>
+                </a>
+    
+                <a href="#folio">
+                    <div class="nav-card">
+                        <i class="fas fa-folder-open"></i>
+                        <h3>Portfolio</h3>
+                    </div>
+                </a>
+    
+               <a href="html/coding.html">
+                    <div class="nav-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Coding Examples</h3>
+                    </div>
+               </a>
+    
+               <a href="html/scsscheme.html">
+                    <div class="nav-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>SCS Scheme</h3>
+                    </div>
+               </a>
+    
+                
+    
+            </section> -->
+    
+            <section class="portfolio" id="folio">
+                <div class="folio-card">
+                    <a href="" class="folio-link">
+                        <div class="picture">
+                            <img src="img/NMMockup.PNG" alt="project-1" class="folio-thumb">
+                            <div class="pop-up">
+                                <p>
+                                    Netmatters Landing Site Fascimile:<br><br>
+    
+                                    A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <h2>Project One</h2>
+                        <p>View Project <i class="fas fa-arrow-right"></i></p>
                     </a>
                 </div>
-            </div>
-            
-        </section>
-
-        <section class="mobile-nav">
-            <a href="html/about.html">
-                <div class="nav-card">
-                    <i class="fas fa-user-alt"></i>
-                    <h3>About Me</h3>
+                <div class="folio-card">
+                    <a href="">
+                        <div class="picture">
+                            <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
+                            <div class="pop-up">
+                                <p>
+                                    Netmatters Landing Site Fascimile:
+    
+                                    A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <h2>Project Two</h2>
+                        <p>View Project <i class="fas fa-arrow-right"></i></p>
+                    </a>
                 </div>
-            </a>
-
-            <a href="#folio">
-                <div class="nav-card">
-                    <i class="fas fa-folder-open"></i>
-                    <h3>Portfolio</h3>
+                <div class="folio-card">
+                    <a href="">
+                        <div class="picture">
+                            <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
+                            <div class="pop-up">
+                                <p>
+                                    Netmatters Landing Site Fascimile:
+    
+                                    A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <h2>Project Three</h2>
+                        <p>View Project <i class="fas fa-arrow-right"></i></p>
+    
+                    </a>
                 </div>
-            </a>
-
-           <a href="html/coding.html">
-                <div class="nav-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Coding Examples</h3>
+                <div class="folio-card">
+                    <a href="">
+                        <div class="picture">
+                            <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
+                            <div class="pop-up">
+                                <p>
+                                    Netmatters Landing Site Fascimile:<br>
+    
+                                    A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <h2>Project Four</h2>
+                        <p>View Project <i class="fas fa-arrow-right"></i></p>
+    
+                    </a>
                 </div>
-           </a>
-
-           <a href="html/scsscheme.html">
-                <div class="nav-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>SCS Scheme</h3>
+                <div class="folio-card">
+                    <a href="">
+                        <div class="picture">
+                            <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
+                            <div class="pop-up">
+                                <p>
+                                    Netmatters Landing Site Fascimile:
+    
+                                    A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <h2>Project Five</h2>
+                        <p>View Project <i class="fas fa-arrow-right"></i></p>
+    
+                    </a>
                 </div>
-           </a>
-
-            
-
-        </section>
-
-        <section class="portfolio" id="folio">
-            <div class="folio-card">
-                <a href="" class="folio-link">
-                    <div class="picture">
-                        <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
-                        <div class="pop-up">
-                            <p>
-                                Netmatters Landing Site Fascimile:<br>
-
-                                A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
-                            </p>
+                <div class="folio-card">
+                    <a href="">
+                        <div class="picture">
+                            <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
+                            <div class="pop-up">
+                                <p>
+                                    Netmatters Landing Site Fascimile:
+    
+                                    A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <h2>Project One</h2>
-                    <p>View Project <i class="fas fa-arrow-right"></i></p>
-                </a>
-            </div>
-            <div class="folio-card">
-                <a href="">
-                    <div class="picture">
-                        <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
-                        <div class="pop-up">
-                            <p>
-                                Netmatters Landing Site Fascimile:
-
-                                A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
-                            </p>
+                        
+                        <h2>Project Six</h2>
+                        <p>View Project <i class="fas fa-arrow-right"></i></p>
+    
+                    </a>
+                </div>
+            </section>
+    
+            <section class="contact-form" id="contact">
+                <div class="info-box">
+                    <h2>Get In Touch</h2>
+                    <p>Cupcake ipsum dolor sit amet sugar plum. Wafer jelly apple pie soufflé. Sesame snaps fruitcake liquorice candy chupa chups oat cake.</p>
+                    <a href="tel:00000000000"><h3>00000 000000</h3></a>
+                    <a href="mailto:info@netmatters.com"><h4>info@netmatters.com</h4></a>
+                    <p>Cupcake ipsum dolor sit amet gummies. Jujubes ice cream tart cake. Chocolate tiramisu sweet bear claw wafer cookie gingerbread sweet roll dessert. Jelly-o lollipop tiramisu macaroon sweet roll cotton candy donut fruitcake ice cream.</p>
+                </div>
+    
+                <div class="form-box">
+                    <form>
+                        <div class="first-last">
+                            <input type="text" id="first-name" placeholder="First Name">
+                            <input type="text" id="last-name" placeholder="Last Name">
                         </div>
-                    </div>
-                    
-                    <h2>Project Two</h2>
-                    <p>View Project <i class="fas fa-arrow-right"></i></p>
-                </a>
-            </div>
-            <div class="folio-card">
-                <a href="">
-                    <div class="picture">
-                        <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
-                        <div class="pop-up">
-                            <p>
-                                Netmatters Landing Site Fascimile:
-
-                                A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <h2>Project Three</h2>
-                    <p>View Project <i class="fas fa-arrow-right"></i></p>
-
-                </a>
-            </div>
-            <div class="folio-card">
-                <a href="">
-                    <div class="picture">
-                        <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
-                        <div class="pop-up">
-                            <p>
-                                Netmatters Landing Site Fascimile:<br>
-
-                                A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <h2>Project Four</h2>
-                    <p>View Project <i class="fas fa-arrow-right"></i></p>
-
-                </a>
-            </div>
-            <div class="folio-card">
-                <a href="">
-                    <div class="picture">
-                        <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
-                        <div class="pop-up">
-                            <p>
-                                Netmatters Landing Site Fascimile:
-
-                                A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <h2>Project Five</h2>
-                    <p>View Project <i class="fas fa-arrow-right"></i></p>
-
-                </a>
-            </div>
-            <div class="folio-card">
-                <a href="">
-                    <div class="picture">
-                        <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-1" class="folio-thumb">
-                        <div class="pop-up">
-                            <p>
-                                Netmatters Landing Site Fascimile:
-
-                                A faithful mockup of the Netmatters official site's landing page including the base html/css and JavaScript behaviour.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <h2>Project Six</h2>
-                    <p>View Project <i class="fas fa-arrow-right"></i></p>
-
-                </a>
-            </div>
-        </section>
-
-        <section class="contact-form" id="contact">
-            <div class="info-box">
-                <h2>Get In Touch</h2>
-                <p>Cupcake ipsum dolor sit amet sugar plum. Wafer jelly apple pie soufflé. Sesame snaps fruitcake liquorice candy chupa chups oat cake.</p>
-                <a href="tel:00000000000"><h3>00000 000000</h3></a>
-                <a href="mailto:info@netmatters.com"><h4>info@netmatters.com</h4></a>
-                <p>Cupcake ipsum dolor sit amet gummies. Jujubes ice cream tart cake. Chocolate tiramisu sweet bear claw wafer cookie gingerbread sweet roll dessert. Jelly-o lollipop tiramisu macaroon sweet roll cotton candy donut fruitcake ice cream.</p>
-            </div>
-
-            <div class="form-box">
-                <form>
-                    <div class="first-last">
-                        <input type="text" id="first-name" placeholder="First Name">
-                        <input type="text" id="last-name" placeholder="Last Name">
-                    </div>
-                    <input type="email" id="email" placeholder="Email">
-                    <input type="text" id="subject" placeholder="Subject">
-                    <textarea id="message" placeholder="Message"></textarea>
-                </form>
-                <button class="submit-btn">Submit</button>
-
-            </div>
-            
-        </section>
-
-        <section class="foot">
-            <div class="to-top">
-                <a href="#top-hotspot">
-                    <i class="fas fa-chevron-up"></i>
-                    <p>Back To Top</p>
-                </a>
-            </div>
-        </section>
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="text" id="subject" placeholder="Subject">
+                        <textarea id="message" placeholder="Message"></textarea>
+                    </form>
+                    <button class="submit-btn">Submit</button>
+    
+                </div>
+                
+            </section>
+    
+            <section class="foot">
+                <div class="to-top">
+                    <a href="#top-hotspot">
+                        <i class="fas fa-chevron-up"></i>
+                        <p>Back To Top</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+        
         <script src="js/jquery.slim.js"></script>
+        <script src="js/mmenu.polyfills.js"></script>
+        <script src="js/mmenu.js"></script>
         <script src="js/jquery.typewriter.js"></script>
         <script src="js/main.js"></script>
         
