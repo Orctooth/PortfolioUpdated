@@ -30,19 +30,24 @@ html {
 }
 
 body {
-  margin: 0 0;
+  padding: 0 auto;
+}
+
+#main-content {
+  margin-left: 180px;
 }
 
 #burger-button {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  left: 0;
+  position: fixed;
+  z-index: 30;
+  top: -7px;
+  left: -8px;
   background: #fff;
+  width: 100%;
 }
 
 .sticky-menu {
-  min-width: 120px;
+  width: 180px;
   min-height: 100vh;
   display: flex;
   z-index: 10;
@@ -63,7 +68,6 @@ body {
   display: block;
 }
 .sticky-menu > .initials-box > h1 > a {
-  color: #33C1B8;
   font-size: 3rem;
 }
 .sticky-menu > .menu-box {
@@ -144,7 +148,6 @@ body {
   display: flex;
   margin: 0 0;
   justify-content: center;
-  margin-left: 15vw;
 }
 .hero-image > .overlay {
   background: rgba(0, 0, 0, 0.35);
@@ -152,15 +155,11 @@ body {
   padding: 40px 30px;
   padding-top: 150px;
   padding-bottom: 30px;
-  position: relative;
 }
 .hero-image > .overlay > .hero-image-text {
-  position: absolute;
-  top: 20vh;
-  left: 10%;
+  position: relative;
   text-align: center;
   display: block;
-  width: 80%;
   margin: 30px auto;
 }
 .hero-image > .overlay > .hero-image-text > h1 {
@@ -191,10 +190,11 @@ body {
 }
 .hero-image > .overlay > .scroll-down-link {
   display: block;
-  position: absolute;
-  top: 80vh;
-  left: 45%;
+  margin: 0 auto;
+  margin-bottom: 30px;
   text-align: center;
+  margin-top: 180px;
+  align-self: flex-end;
 }
 .hero-image > .overlay > .scroll-down-link > a {
   display: inline-block;
@@ -267,8 +267,8 @@ body {
   display: flex;
   flex-direction: row;
   margin: 40px auto;
-  margin-left: 30vw;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .portfolio > .folio-card {
   width: 25%;
@@ -336,7 +336,8 @@ body {
 .contact-form {
   display: flex;
   flex-direction: row;
-  margin-left: 20vw;
+  margin: 0 auto;
+  justify-content: center;
 }
 .contact-form > .info-box {
   display: block;
@@ -348,22 +349,21 @@ body {
 .contact-form > .form-box {
   display: block;
   width: 65%;
-  margin-left: 30px;
+  margin: 0 auto;
 }
 .contact-form > .form-box > form {
   width: 100%;
 }
 .contact-form > .form-box > form > .first-last {
   display: flex;
-  width: 100%;
-  padding: 0 0;
-  flex-grow: 1;
+  display: block;
 }
 .contact-form > .form-box > form > .first-last > input {
-  max-width: 50%;
+  flex: 30%;
 }
 .contact-form > .form-box > form > #email, .contact-form > .form-box > form #subject, .contact-form > .form-box > form #message {
   width: 100%;
+  display: block;
 }
 .contact-form > .form-box > form > input, .contact-form > .form-box > form .first-last input {
   background: #ccc;
@@ -375,7 +375,7 @@ body {
 }
 .contact-form > .form-box > form > textarea {
   height: 75px;
-  margin: 15px 0px;
+  margin: 5px 0px !important;
   padding: 15px 15px;
   background: #ccc;
   border: none;
@@ -401,12 +401,6 @@ body {
 
 .foot {
   display: flex;
-  margin-left: 15vw;
-}
-@media screen and (-ms-high-contrast: active) {
-  .foot {
-    margin-left: 50vw;
-  }
 }
 .foot > .to-top {
   display: block;
@@ -431,7 +425,6 @@ body {
 
 .internal-section {
   height: 100%;
-  margin-left: 15vw;
   display: flex;
   align-items: center;
   padding: 30px 30px;
@@ -465,7 +458,7 @@ body {
   }
 
   .portfolio {
-    margin-left: 15px;
+    margin: 0 auto;
   }
   .portfolio > .folio-card {
     margin: 0 auto;
@@ -473,8 +466,9 @@ body {
   }
 
   .contact-form {
-    margin-left: 15px;
+    margin: 0 auto;
     flex-wrap: wrap;
+    padding: 0 15px;
   }
   .contact-form > .info-box {
     width: 100%;
@@ -497,16 +491,10 @@ body {
   }
 }
 @media only screen and (min-width: 425px) {
-  .portfolio {
-    margin-left: 40vw;
-  }
   .portfolio > .folio-card {
-    width: 80%;
+    width: 40%;
   }
 
-  .hero-image {
-    margin-left: 150px;
-  }
   .hero-image > .overlay > .hero-image-text {
     margin: 0 auto;
   }
@@ -516,25 +504,13 @@ body {
   }
 
   .contact-form {
-    margin-left: 200px;
-    flex-wrap: wrap;
+    margin: 0 auto;
   }
   .contact-form > .info-box {
-    width: 100%;
-    margin: 0 auto;
+    width: 30%;
   }
   .contact-form > .form-box {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .contact-form > .form-box > form {
-    width: 100%;
-  }
-  .contact-form > .form-box > form > input, .contact-form > .form-box > form textarea {
-    max-width: 80%;
-  }
-  .contact-form > .form-box > form > .first-last {
-    max-width: 80%;
+    width: 40%;
   }
 
   .internal-section > .text-block {
@@ -547,12 +523,8 @@ body {
     margin: 0 auto;
   }
 
-  .portfolio {
-    margin-left: 10vw;
-  }
-
-  .contact-form {
-    margin-left: 10vw;
+  #main-content {
+    margin-left: 0;
   }
 
   .sticky-menu {
@@ -572,18 +544,18 @@ body {
     display: none;
   }
 
-  .portfolio {
-    margin-left: 25vw;
-  }
   .portfolio > .folio-card {
     width: 40%;
   }
 
+  .contact-form {
+    margin: 0 auto;
+  }
   .contact-form > .info-box {
-    width: 25%;
+    width: 35%;
   }
   .contact-form > .form-box {
-    width: 60%;
+    width: 45%;
   }
 }
 @media only screen and (min-width: 1024px) {

@@ -27,6 +27,7 @@ $purple-ish: #0D0225;
     }
     textarea{
         overflow: auto;
+        
     }
 }
 
@@ -35,7 +36,11 @@ html{
 }
 
 body{
-    margin: 0 0;
+    padding: 0 auto;
+}
+
+#main-content{
+    margin-left: 180px;
 }
 
 // Settings for hammmburger
@@ -59,15 +64,15 @@ $hamburger-types: (
 ) !default;
 
 #burger-button{
-    position: sticky;
-    z-index: 10;
-    top:0;
-    left:0;
+    position: fixed;
+    z-index: 30;
+    top:-7px;
+    left:-8px;
     background: #fff;
+    width: 100%;
 }
 .sticky-menu{
-    //width: 15vw;
-    min-width: 120px;
+    width: 180px;
     min-height: 100vh;
     display: flex;
     z-index: 10;
@@ -86,7 +91,7 @@ $hamburger-types: (
             display: block;
             
             & > a{
-                color: $blue-ish;
+                //color: $blue-ish;
                 font-size: 3rem;
             }
         }
@@ -175,7 +180,7 @@ $hamburger-types: (
     display: flex;
     margin: 0 0;
     justify-content: center;
-    margin-left: 15vw;
+    //margin-left: 15vw;
     
     & > .overlay{
         background: rgba(0,0,0,0.35);
@@ -183,15 +188,17 @@ $hamburger-types: (
         padding: 40px 30px;
         padding-top: 150px;
         padding-bottom: 30px;
-        position: relative;
+        
+        //position: relative;
         & > .hero-image-text{
-            position: absolute;
-            top: 20vh;
-            left: 10%;
+            position: relative;
+            // top: 20vh;
+            // left: 10%;
             text-align: center;
             display: block;
-            width: 80%;
+            //width: 80%;
             margin: 30px auto;
+            
             
             & > h1{
                 font-size: 3rem;
@@ -224,14 +231,17 @@ $hamburger-types: (
                 display: block;
                 font-weight: 700;
                 color: #fff;
+                
             }
         }
         & > .scroll-down-link{
             display: block;
-            position: absolute;
-            top: 80vh;
-            left: 45%;
+            margin: 0 auto;
+            margin-bottom: 30px;
             text-align: center;
+            margin-top: 180px;
+            align-self: flex-end;
+            
             
             & > a{
                 display: inline-block;
@@ -316,8 +326,8 @@ $hamburger-types: (
     display: flex;
     flex-direction: row;
     margin: 40px auto;
-    margin-left: 30vw;
     flex-wrap: wrap;
+    justify-content: center;
     & > .folio-card{
         width: 25%;
         margin: 15px 15px;
@@ -400,7 +410,8 @@ $hamburger-types: (
 .contact-form{
     display: flex;
     flex-direction: row;
-    margin-left: 20vw;
+    margin: 0 auto;
+    justify-content: center;
     & > .info-box{
         display: block;
         width: 25%;
@@ -411,21 +422,25 @@ $hamburger-types: (
     & > .form-box{
         display: block;
         width: 65%;
-        margin-left: 30px;
+        margin: 0 auto;
         & > form{
             width: 100%;
+            //display: flex;
             & > .first-last{
                 display: flex;
-                width: 100%;
-                padding: 0 0;
-                flex-grow: 1;
+                //justify-content: space-evenly;
+                //width: 100%;
+                display: block;
+                
                 & > input{
-                    max-width: 50%;
-                   
+                    flex: 30%;
+                    
+                    
                 }
             }
             & > #email, #subject, #message{
                 width: 100%;
+                display: block;
             }
             & > input, .first-last input{
                 background: #ccc;
@@ -437,7 +452,7 @@ $hamburger-types: (
             }
             & > textarea{
                 height: 75px;
-                margin: 15px 0px;
+                margin: 5px 0px !important;
                 padding: 15px 15px;
                 background: #ccc;
                 border: none;
@@ -467,9 +482,9 @@ $hamburger-types: (
 
 .foot{
     display: flex;
-    margin-left: 15vw;
+    //margin-left: 15vw;
     @media screen and (-ms-high-contrast: active){
-        margin-left: 50vw;
+        //margin-left: 50vw;
     }
     & > .to-top{
         display: block;
@@ -498,7 +513,7 @@ $hamburger-types: (
 
 .internal-section{
     height: 100%;
-    margin-left: 15vw;
+    //margin-left: 15vw;
     display: flex;
     align-items: center;
     padding: 30px 30px;

@@ -19,7 +19,7 @@
     --mm-offset-left: 0;
     --mm-color-border: rgba(0, 0, 0, 0.1);
     --mm-color-button: rgba(0, 0, 0, 0.3);
-    --mm-color-text: rgba(0, 0, 0, 0.75);
+    --mm-color-text: #0D0225;
     --mm-color-text-dimmed: rgba(0, 0, 0, 0.3);
     --mm-color-background: #f3f3f3;
     --mm-color-background-highlight: rgba(0, 0, 0, 0.05);
@@ -99,7 +99,7 @@
     overflow-y: hidden;
     color: var(--mm-color-text);
     border-color: var(--mm-color-border);
-    background: var(--mm-color-background);
+    background: #33c1b8;
     -webkit-transform: translate3d(36%, 0, 0);
     transform: translate3d(36%, 0, 0);
     -webkit-transition: -webkit-transform .4s ease;
@@ -2053,7 +2053,7 @@ input.mm-check:checked:before {
 
 .mm-listview_inset {
     list-style: inside disc;
-    width: 45vw;
+    /* width: 45vw; */
     /* padding: 0 30px 15px 30px; */
     margin: 0
 }

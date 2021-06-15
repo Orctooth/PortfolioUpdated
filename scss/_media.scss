@@ -1,6 +1,8 @@
 //Navigation menu queries.
 @media only screen and (max-width: 425px) {
     
+
+
     .hero-image{
         & > .overlay{
             & > .hero-image-text{
@@ -12,7 +14,7 @@
     }
 
     .portfolio{
-        margin-left: 15px;
+        margin: 0 auto;
         & > .folio-card{
             margin: 0 auto;
             width: 80%;
@@ -20,8 +22,9 @@
     }
 
     .contact-form{
-        margin-left: 15px;
+        margin: 0 auto;
         flex-wrap: wrap;
+        padding: 0 15px;
         & > .info-box{
             width: 100%;
             margin: 0 auto;
@@ -35,6 +38,7 @@
                 }
                 & > .first-last{
                     display: block;
+                    
                 }
             }
         }
@@ -51,14 +55,20 @@
 
 @media only screen and (min-width: 425px) {
     
+    // .portfolio{
+    //     & > .folio-card{
+    //         width: 80%;
+            
+            
+    //     }
+    //     //margin-left: 40vw;
+        
+    // }
     .portfolio{
         & > .folio-card{
-            width: 80%;
-            
-            
+            width: 40%;
         }
-        margin-left: 40vw;
-        
+        //margin-left: 25vw;
     }
 
 
@@ -73,30 +83,21 @@
                 }
             }
         }
-        margin-left: 150px;
+        //margin-left: 150px;
     }
 
     .contact-form{
-        margin-left: 200px;
-        flex-wrap: wrap;
+        margin: 0 auto;
         & > .info-box{
-            width: 100%;
-            margin: 0 auto;
+            width: 30%;
+            
         }
         & > .form-box{
-            width: 100%;
-            margin: 0 auto;
-            & > form{
-                width: 100%;                & > input, textarea{
-                    max-width: 80%;
-                }
-                & > .first-last{
-                    max-width: 80%;
-                }
-                
-            }
+            width: 40%;
         }
     }
+
+    
 
     .internal-section{
        
@@ -113,12 +114,8 @@
         margin: 0 auto;
     }
 
-    .portfolio{
-        margin-left: 10vw;
-    }
-
-    .contact-form{
-        margin-left: 10vw;
+    #main-content{
+        margin-left: 0;
     }
 
     
@@ -149,18 +146,21 @@
         & > .folio-card{
             width: 40%;
         }
-        margin-left: 25vw;
+        //margin-left: 25vw;
     }
 
     .contact-form{
+        margin: 0 auto;
         & > .info-box{
-            width: 25%;
+            width: 35%;
             
         }
         & > .form-box{
-            width: 60%;
+            width: 45%;
         }
     }
+
+    
 }
 
 @media only screen and (min-width: 1024px) {
