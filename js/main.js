@@ -70,11 +70,10 @@ document.addEventListener(
 
 
 
-$('.typed').typeWrite({
-    repeat: true,
-    interval: 4000,
-    speed: 20,
-    color: "#fff"
-});
+new Typewriter('.typed', {
+    strings: ['I am a web developer', 'I am a game developer', 'I am a web designer', 'I am a game designer'],
+    autoStart: true,
+    loop: true,
+  });
 
 

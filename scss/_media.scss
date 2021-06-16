@@ -14,7 +14,8 @@
     }
 
     .portfolio{
-        margin: 0 auto;
+        margin: 40px auto;
+        display: block;
         & > .folio-card{
             margin: 0 auto;
             width: 80%;
@@ -32,15 +33,7 @@
         & > .form-box{
             width: 100%;
             margin: 0 auto;
-            & > form{
-                & > input, textarea{
-                    max-width: 80%;
-                }
-                & > .first-last{
-                    display: block;
-                    
-                }
-            }
+            
         }
     }
 
@@ -89,11 +82,12 @@
     .contact-form{
         margin: 0 auto;
         & > .info-box{
-            width: 30%;
+            width: 35%;
             
         }
         & > .form-box{
             width: 40%;
+            margin-left: auto;
         }
     }
 
@@ -110,7 +104,7 @@
     
 }
 @media only screen and (max-width: 786px){
-    .hero-image, .portfolio, .contact-form, .foot, .internal-section{
+    .hero-image, .contact-form, .foot, .internal-section{
         margin: 0 auto;
     }
 
@@ -121,6 +115,18 @@
     
     .sticky-menu{
         display: none;
+    }
+
+    .first-last{
+        flex-wrap: wrap;
+        & > input{
+            width: 100%;
+            display: block;
+            margin-left: 0px;
+        }
+        & > #last-name{
+            margin-left: 0px !important;
+        }
     }
 
     

@@ -7,8 +7,10 @@ $purple-ish: #0D0225;
     -webkit-appearance: none;
     -ms-appearance: none;
     -moz-appearance: none;
+    box-sizing: border-box;
     a{
         text-decoration: none;
+        color: inherit;
     }
     ul{
         list-style: none;
@@ -29,6 +31,22 @@ $purple-ish: #0D0225;
         overflow: auto;
         
     }
+    textarea::-ms-clear{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    input[type="email"], input[type="password"], input[type="text"] 
+    {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 20px; // Increase height as required
+        margin-bottom: 30px;
+        padding: 0 20px; // Now only left & right padding
+    }
+    
 }
 
 html{
@@ -89,9 +107,9 @@ $hamburger-types: (
         text-align: center;
         & > h1{
             display: block;
-            
+            color: $blue-ish;
             & > a{
-                //color: $blue-ish;
+                
                 font-size: 3rem;
             }
         }
@@ -105,11 +123,13 @@ $hamburger-types: (
         & > ul{
             list-style: none;
             padding-left: 0;
+            color: $purple-ish;
             & > li{
                 display: block;
                 margin-bottom: 15px;
                 list-style: none;
                 padding-left: 0;
+                color: $purple-ish;
                 & > a{
                     color: $purple-ish;
                     font-weight: 700;
@@ -338,7 +358,7 @@ $hamburger-types: (
             & > .picture{
                 overflow: hidden;
                 position: relative;
-                z-index: -1;
+                //z-index: -1;
                 & > img{
                     width: 100%;
                     height: 200px;
@@ -354,7 +374,7 @@ $hamburger-types: (
                     top: 100%;
                     padding: 15px 15px;
                     left: 0;
-                    z-index: 1;
+                    z-index: -1;
                     background: rgba(0,0,0,0.75);
                     & > p{
                         font-size: 0.8rem;
@@ -411,54 +431,81 @@ $hamburger-types: (
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    justify-content: center;
+    padding: 0 30px;
+
     & > .info-box{
         display: block;
-        width: 25%;
+        width: 30%;
         & > *{
             color: $purple-ish;
         }
     }
     & > .form-box{
         display: block;
-        width: 65%;
-        margin: 0 auto;
+        width: 40%;
+        margin-left: 0;
+        //margin-right:0;
+        // (#¬_¬)
         & > form{
-            width: 100%;
-            //display: flex;
-            & > .first-last{
-                display: flex;
-                //justify-content: space-evenly;
-                //width: 100%;
-                display: block;
-                
+            
+            & > div {
+                width: 100%;
+                &:first-of-type{
+                    display: flex;
+                    width: 100%;
+                }
+                &:last-of-type{
+                    & > input{
+                        width: 100%;
+                    }
+                }
+
                 & > input{
-                    flex: 30%;
+                    background: #ccc;
+                    border: none;
+                    border-radius: 3px;
+                    height: 50px;
+                    width: 100%;
+                    display: block;
+                    margin: 5px 0px;
+                    //padding: 30px 15px;
+                   
+                }
+                & > #first-name{
+                    
+                    box-sizing: border-box;
+                }
+                & > #last-name{
+                    
+                    margin-left: 5px;
+                    box-sizing: border-box;
+                }
+                & > #email, #subject{
+                    //max-width: 100%;
+                   
+                    box-sizing: border-box;
                     
                     
                 }
+                & >#email{
+                    margin-bottom: 10px;
+                }
+                & > textarea{
+                    box-sizing: border-box;
+                    height: 75px !important;
+                    margin: 5px 0px !important;
+                    padding: 15px 15px;
+                    padding-bottom: 40px;
+                    background: #ccc;
+                    border: none;
+                    width: 100%;
+                    border-radius: 3px;
+                    resize: none;
+                }
+                
             }
-            & > #email, #subject, #message{
-                width: 100%;
-                display: block;
-            }
-            & > input, .first-last input{
-                background: #ccc;
-                border: none;
-                border-radius: 3px;
-                height: 20px;
-                margin: 5px 0px;
-                padding: 15px 15px;
-            }
-            & > textarea{
-                height: 75px;
-                margin: 5px 0px !important;
-                padding: 15px 15px;
-                background: #ccc;
-                border: none;
-                border-radius: 3px;
-                resize: none;
-            }
+           
+            
         }
         & > button{
             margin-left: 0px;

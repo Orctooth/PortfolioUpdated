@@ -57,7 +57,13 @@
         <div id="my-page">
             
             
-            
+            <div id="burger-button">
+                <button class="hamburger hamburger--elastic" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
             
             
             <div class="sticky-menu sticky-desktop">
@@ -94,13 +100,7 @@
             </div>
 
             <div id="main-content">
-                <div id="burger-button">
-                    <button class="hamburger hamburger--elastic" type="button">
-                        <span class="hamburger-box">
-                          <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
+                
                 
                 <div class="hero-image" id="top-hotspot">
                     <div class="overlay">
@@ -245,9 +245,12 @@
                                 <input type="text" id="first-name" placeholder="First Name">
                                 <input type="text" id="last-name" placeholder="Last Name">
                             </div>
-                            <input type="email" id="email" placeholder="Email">
-                            <input type="text" id="subject" placeholder="Subject">
-                            <textarea id="message" placeholder="Message"></textarea>
+                            <div class="inputs">
+                                <input type="email" id="email" placeholder="Email">
+                                <input type="text" id="subject" placeholder="Subject">
+                                <textarea id="message" placeholder="Message"></textarea>
+                            </div>
+                            
                         </form>
                         <button class="submit-btn">Submit</button>
         
@@ -267,12 +270,14 @@
             </div>
     
         </div>
-        
-        <script src="js/jquery.slim.js"></script>
-        <script src="js/mmenu.polyfills.js"></script>
-        <script src="js/mmenu.js"></script>
-        <script src="js/jquery.typewriter.js"></script>
-        <script src="js/main.js"></script>
+        <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <!-- <script src="js/jquery.slim-dist.js"></script> -->
+        <script src="js/jquery.js"></script>
+        <script src="js/mmenu.polyfills-dist.js"></script>
+        <script src="js/mmenu-dist.js"></script>
+        <!-- <script type="module" src="js/jquery.typewriter-dist.js"></script> -->
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script src="js/main-dist.js"></script>
         
     </body>
 </html>

@@ -43,7 +43,7 @@
     left: 0;
     background: #f3f3f3;
     border-color: rgba(0, 0, 0, .1);
-    color: rgba(0, 0, 0, .75);
+    color: #0D0225;
     line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -66,7 +66,7 @@
     overscroll-behavior: auto;
     background: var(--mm-color-background);
     border-color: var(--mm-color-border);
-    color: var(--mm-color-text);
+    color: #0D0225;
     line-height: var(--mm-line-height);
     -webkit-tap-highlight-color: var(--mm-color-background-emphasis);
     -webkit-font-smoothing: antialiased;
@@ -89,7 +89,7 @@
 .mm-panel {
     /* background: #f3f3f3; */
     border-color: rgba(0, 0, 0, .1);
-    color: rgba(0, 0, 0, .75);
+    color: #0D0225;
     z-index: 10;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -97,7 +97,7 @@
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
     overflow-y: hidden;
-    color: var(--mm-color-text);
+    color: #0D0225;
     border-color: var(--mm-color-border);
     background: #33c1b8;
     -webkit-transform: translate3d(36%, 0, 0);
@@ -164,7 +164,7 @@
 .mm-panels {
     background: #f3f3f3;
     border-color: rgba(0, 0, 0, .1);
-    color: rgba(0, 0, 0, .75);
+    color: #0D0225;
     position: relative;
     height: 100%;
     -webkit-box-flex: 1;
@@ -173,7 +173,7 @@
     overflow: hidden;
     background: var(--mm-color-background);
     border-color: var(--mm-color-border);
-    color: var(--mm-color-text)
+    color: #0D0225;
 }
 
 [dir=rtl] .mm-panel:not(.mm-panel_opened) {
