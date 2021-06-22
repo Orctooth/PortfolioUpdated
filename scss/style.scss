@@ -587,6 +587,26 @@ $hamburger-types: (
                 padding-bottom: 0;
             }
         }
+        & > pre{
+            max-height: 300px;
+            & > code{
+                color: yellow;
+                &:first-of-type{
+                    padding-left: 20px;
+                }
+            }
+            & > .players{
+                height: 100px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+.steps{
+    list-style-type: disc;
+    & > li{
+        margin-bottom: 5px;
     }
 }
 
