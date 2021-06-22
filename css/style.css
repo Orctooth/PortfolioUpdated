@@ -532,7 +532,7 @@ body {
 
   .internal-section > .text-block {
     margin: 0 auto;
-    width: 70%;
+    width: 95%;
   }
 }
 @media only screen and (min-width: 425px) {
