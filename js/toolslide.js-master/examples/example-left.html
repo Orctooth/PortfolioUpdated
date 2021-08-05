@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toolslide.js - demo</title>
+	<meta name="author" content="your name" />
+	<meta name="description" content="" />
+	
+	<link rel="stylesheet" href="example.css" type="text/css" />
+	<link rel="stylesheet" href="../dist/toolslide.css" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+</head>
+<body>
+  <div class="ts-embed-container">
+    <div id="toolslide">
+      <div class="ts-container">
+        <div class="ts-nav-container">
+            
+        </div>
+        <div class="ts-content-container">
+            <div id="first" class="ts-content-item">
+                <div class="example-panel">
+                    <h3>Simple panel</h3>
+                    <ul>
+                        <li>without navigation - just toggle button</li>
+                        <li>embeded within content (content moves when menu is toggled)</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="second" class="ts-content-item">
+                <div class="example-panel">
+                    <span>Second panel content goes here</span>
+                </div>
+            </div>
+            <div id="third" class="ts-content-item">
+                <div class="example-panel">
+                    <span>Third panel content goes here</span>
+                </div>
+            </div>
+        </div>
+      </div>  
+    </div>
+    <div id="main">
+        <div class="nav">
+            <div type="button" id="toggle-menu-button" class="pull-left">
+                <i class="glyphicon glyphicon-menu-hamburger"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="col-xs-12">
+                <h3>This is a heading</h3>
+                <p>This is some text...</p>
+            </div>
+        </div>
+    </div>
+  </div>
+<script src="../dist/toolslide.js"></script>
+<script>
+	var toolslide = toolslide("#toolslide", {
+        toggleButton: "#toggle-menu-button",
+        startOpen: true,
+        embed: true
+	});
+</script>
+</body>
+</html>

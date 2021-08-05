@@ -1,5 +1,9 @@
-html{
-    background-image: url("../img/didssph-PGNyuruIx1M-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+
+
+.turn{
+    transform: rotate(90deg);
+}
+
+.fa-arrow-right{
+    transition: transform .2s;
 }

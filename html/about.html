@@ -25,7 +25,7 @@
                         <a href="about.html">About Me</a>
                     </li>
                     <li>
-                        <a href="../index.html#folio">My Portfolio</a>
+                        <a id="folio-link" href="../index.html#folio">My Portfolio</a>
                     </li>
                     <li>
                         <a href="coding.html">Coding Examples</a>
@@ -40,7 +40,7 @@
                 
             </li>
             <li class="contact-label-box">
-                <a href="../index.html#contact">Contact Me</a>
+                <a id="contact-link" href="../index.html#contact">Contact Me</a>
             </li>
             <li class="contact-icon-box">
                 <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
@@ -52,9 +52,15 @@
 
     <div id="my-page">
 
-        
+        <div id="burger-button">
+            <button class="hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
 
-        <section class="sticky-menu">
+        <div class="sticky-menu">
             <div class="initials-box">
                 <h1><a href="../index.html">HW</a></h1>
             </div>
@@ -85,25 +91,67 @@
                 <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
             </div>
-        </section>
+        </div>
 
         <div id="main-content">
-            <div id="burger-button">
-                <button class="hamburger hamburger--elastic" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-            <section class="about internal-section">
-                <div class="text-block about-block">
-                    <h1>About Me</h1>
-                    <p><span class="dropcap">I</span> am a games computing graduate currently participating in the scion scheme web development course with Netmatters. While I've yet to start my first professional position in games or web development, I have already learned a great deal of programming and design techniques in both practices, and my aim is to continue building upon these skills.</p>
-                    <p>Outside of the work world I like to unwind by playing interesting indie games and from time to time I will participate in game jams. I also like to tinker around with chiptune composition using tools based off of old games console sound kits.</p>
-                    <p>My experiences with programming cover the use of C#, C++, JavaScript and Python. My markup language toolset includes HTML, CSS and SASS. I am also experienced in using Unity Game Engine for games development. I graduated from university last year with a 2:2 bachelor's degree in games computing.</p>
+            
+
+            
+                <div class="hero-image" id="top-hotspot">
+                    <div class="overlay">
+                        <div class="hero-image-text">
+                            <h1 id="title">About Me</h1>
+                            <h3 class="typed">Information about me</h3>
+                        </div>
+            
+                        <div class="scroll-down-link">
+                            <a href="#eg-1">
+                                <p>Scroll Down</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
                 </div>
-        
-            </section>
+
+                <section class="about internal-section">
+                    <div class="text-block about-block">
+                        <h1>Summary</h1>
+                        <p><span class="dropcap">I</span> am a Games Computing graduate currently participating in the Scion Coalition Scheme web development course with Netmatters where I’ve been learning the technical skills required to becoming a Web Developer. Through my time on this course I’ve also learnt the necessary skills required to work in development such as good timekeeping, collaborating remotely with others, attending weekly meetings and excellent note keeping as we’re treated just like employees whilst being on the course. While I've yet to start my first professional position in development, I have already learned a great deal of programming and design techniques, and my aim is to continue building upon these skills alongside my first role.</p>
+                        <p>
+                            In my spare time when I’m not coding I still enjoy hobbies related to technology. I like to relax by playing interesting indie games such as The Binding of Isaac and from time to time I will participate in game jams where I collaborate with other people where we each assume a role in a team based on our skills (Artists, musicians, and writers often participate in these events too!). I also like to tinker around with chiptune composition using tools based off of old games console sound kits. In addition I've started learning how to use Blender (CG modelling and rendering software).
+                        </p>
+                        <p>
+                            My experiences with programming cover the use of C#, C++, JavaScript and Python. My markup language toolset includes HTML, CSS and SASS. I am also experienced in using Unity Game Engine for games development. I graduated from university last year with a 2:2 bachelor's degree in Games Computing and I’m looking forward to utilising all of these in a Junior Developer role.
+                        </p>  
+                    
+                    </div>
+
+                    <div class="text-block about-block">
+                        <h1>Technical Skills</h1>
+                        <div class="languages">
+                            <div>
+                                <h3>Front End</h3>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>SASS</p>
+                                <p>JavaScript</p>
+                                <p>JQuery</p>
+                            </div>
+
+                            <div>
+                                <h3>Back End</h3>
+                                <p>PHP</p>
+                                <p>C++</p>
+                                <p>C#</p>
+                                <p>Python</p>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+            
+                </section>
         </div>
     
         
@@ -112,10 +160,11 @@
     </div>
 
     <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="../js/mmenu.polyfills-dist.js"></script>
+    <script src="../js/jquery.js"></script>
     <script src="../js/mmenu-dist.js"></script>
-    <script src="../js/main-dist.js"></script>
+    <script src="../js/typewriter-core-dist.js"></script>
+    <script src="../js/jquery.about-app.js"></script>
+
 
 
 

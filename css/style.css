@@ -52,6 +52,10 @@ body {
   margin-left: 180px;
 }
 
+#my-page {
+  background: #fff;
+}
+
 #burger-button {
   position: fixed;
   z-index: 30;
@@ -59,6 +63,14 @@ body {
   left: -8px;
   background: #fff;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+#burger-button > .hamburger {
+  display: block;
+}
+#burger-button > .hamburger > .hamburger-box {
+  display: block;
 }
 
 .sticky-menu {
@@ -84,7 +96,11 @@ body {
   color: #33C1B8;
 }
 .sticky-menu > .initials-box > h1 > a {
+  transition: color 0.4s ease-in;
   font-size: 3rem;
+}
+.sticky-menu > .initials-box > h1 > a:hover {
+  color: #0D0225;
 }
 .sticky-menu > .menu-box {
   border-bottom: 3px solid #33C1B8;
@@ -134,28 +150,19 @@ body {
   font-size: 1.5rem;
   display: block;
   margin: 0 auto;
+  transition: color 0.4s ease-in;
+}
+.sticky-menu > .contact-icon-box > a i:hover {
+  color: #0D0225;
 }
 
-.back-button {
-  position: fixed;
-  top: 30px;
-  left: 20vw;
+#my-menu {
+  width: 180px;
+  background: #fff;
 }
-.back-button > .back > a {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  line-height: 0.01;
-}
-.back-button > .back > a > i {
-  display: block;
-  color: #0D0225;
-  font-size: 2.5rem;
-}
-.back-button > .back > a > p {
-  display: block;
-  color: #0D0225;
-  font-size: 1.5rem;
+
+#mm-0 {
+  width: 180px;
 }
 
 .hero-image {
@@ -212,7 +219,6 @@ body {
   margin-bottom: 30px;
   text-align: center;
   margin-top: 180px;
-  align-self: flex-end;
 }
 .hero-image > .overlay > .scroll-down-link > a {
   display: inline-block;
@@ -286,7 +292,8 @@ body {
   flex-direction: row;
   margin: 40px auto;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 15px;
 }
 .portfolio > .folio-card {
   width: 25%;
@@ -295,10 +302,14 @@ body {
 .portfolio > .folio-card > a > .picture {
   overflow: hidden;
   position: relative;
+  display: flex;
+  height: 200px;
 }
 .portfolio > .folio-card > a > .picture > img {
   width: 100%;
-  height: 200px;
+  height: auto;
+  flex: 2;
+  overflow: hidden;
   position: relative;
   z-index: -2;
   border-radius: 3px;
@@ -310,6 +321,7 @@ body {
   transition: transform, 0.3s;
   top: 100%;
   padding: 15px 15px;
+  width: 100%;
   left: 0;
   z-index: -1;
   background: rgba(0, 0, 0, 0.75);
@@ -353,7 +365,7 @@ body {
 .contact-form {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 0 30px;
 }
 .contact-form > .info-box {
@@ -456,21 +468,21 @@ body {
 .internal-section {
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 30px 30px;
+  width: 100%;
+  margin: 0 auto;
 }
 .internal-section > .text-block {
   border: 5px solid #33C1B8;
   background: #fff;
   width: 80%;
   height: 100%;
-  margin: 50px 30px;
+  margin-top: 80px;
   display: block;
   padding: 15px 30px;
   border-radius: 3px;
-}
-.internal-section > .text-block * {
-  color: #0D0225;
 }
 .internal-section > .text-block > p > .dropcap {
   float: left;
@@ -480,6 +492,7 @@ body {
   padding-right: 8px;
   padding-left: 3px;
   padding-bottom: 0;
+  color: #0D0225;
 }
 .internal-section > .text-block > pre {
   max-height: 300px;
@@ -502,6 +515,19 @@ body {
   margin-bottom: 5px;
 }
 
+.languages {
+  display: flex;
+  justify-content: space-around;
+}
+.languages > div {
+  text-align: center;
+}
+
+.expand:hover h2 {
+  text-decoration: underline;
+  color: #33C1B8;
+}
+
 @media only screen and (max-width: 425px) {
   .hero-image > .overlay > .hero-image-text > h1 {
     font-size: 2rem;
@@ -513,7 +539,7 @@ body {
   }
   .portfolio > .folio-card {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
   }
 
   .contact-form {
@@ -531,13 +557,17 @@ body {
   }
 
   .internal-section > .text-block {
-    margin: 0 auto;
-    width: 95%;
+    margin: 40px auto;
+    width: 100%;
+  }
+
+  .languages {
+    flex-direction: column;
   }
 }
 @media only screen and (min-width: 425px) {
   .portfolio > .folio-card {
-    width: 40%;
+    width: 100%;
   }
 
   .hero-image > .overlay > .hero-image-text {
@@ -560,8 +590,13 @@ body {
   }
 
   .internal-section > .text-block {
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 40px auto;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .portfolio > .folio-card {
+    width: 40%;
   }
 }
 @media only screen and (max-width: 786px) {
