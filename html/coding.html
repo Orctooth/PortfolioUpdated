@@ -45,8 +45,8 @@
                 <a id="contact-link" href="../index.html#contact">Contact Me</a>
             </li>
             <li class="contact-icon-box">
-                <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
+                <a target="_blank" href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
             </li>
         </ul>
 
@@ -90,8 +90,8 @@
                 <a href="../index.html#contact">Contact Me</a>
             </div>
             <div class="contact-icon-box">
-                <a href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/harry-welchman-0ba7a01a0/"><i class="fab fa-linkedin-in"></i></a>
+                <a target="_blank" href="https://github.com/Orctooth"><i class="fab fa-github"></i></a>
             </div>
         </div>
 
@@ -123,6 +123,7 @@
                 
                     <div class="hidden-block collapse" hidden="true">
                         <h2>Soccer Database</h2>
+                        <p>I have learned about using databases during my time on the scs program. To demonstrate what I've learned about querying databases, I was tasked to write an SQL query for a sample soccer-database that had to contain a sub-query. Depicted below is the table schema for this database. </p>
                         <pre><code class="language-html"><img src="../img/soccer-database.png" alt="employee-database"></code></pre>
                         <h3>Player Data</h3>
                         <pre><code class="language-html players">
@@ -787,6 +788,7 @@
                     
                 
                     <div class="hidden-block collapse" hidden="true">
+                        <p>The following code snippet is from a task where I had to integrate some PHP functionality into one of my pre-existing projects. One of the requirements of the task was creating a fully functional contact form that would typically appear on a business site.</p>
                         <pre><code class="lang-php">
 include 'connection.php';
 
@@ -867,7 +869,7 @@ try{
     throw $e;
 }
                         </code></pre>
-                        <p>This coding snippet is from the Netmatters fascimile project. The code displayed is executed as the action of a form the user has submitted data to from the previous page.</p>
+                        <p>The code displayed is executed as the action of a form the user has submitted data to from the previous page.</p>
                         <p>A database connection is established for the page and the variables are declared.</p>
                         <p>Then, the inputs obtained from the POST request executed on the previous page are assigned to the variables.</p>
                         <p>However, they are first processed for filtering through the "test_input" function. Here, whitespace is removed with 'trim()', escape characters removed with stripslashes(), and html tags converted using htmlspecialchars(). This prevents a user attempting an injection attack from inserting JavaScript, php, or SQL code to execute a malicious program. </p>
@@ -883,6 +885,7 @@ try{
                   
                 
                     <div class="hidden-block collapse" hidden="true">
+                        <p>This coding snippet is from the Javascript project 'Pic-a-pic': a site where you can retrieve an image from the online image hosting service Picsum. You can then assign an email to the shown image and it will be displayed below next to the email with the possibility for multiple images to be assigned to the same email.</p>
                         <pre><code class="lang-js">
 function generateImage() {
     axios.get('https://picsum.photos/200')
@@ -898,7 +901,6 @@ function generateImage() {
     });
 }
                         </code></pre>
-                        <p>This coding snippet is from the Javascript project 'Pic-a-pic': a site where you can retrieve an image from the online image hosting service Picsum. You can then assign an email to the shown image and it will be displayed below next to the email with the possibility for multiple images to be assigned to the same email.</p>
                         <p>The code shown is the function that generates a promise object for the image. Axios is used here as it is a more cross browser friendly method of executing HTTP requests than using node-fetch and is less verbose than using a raw HTTP request.</p>
                         <p>The url that is shown in the get request will return a random photo. The id of the photo returned is then concatenated to a url to make the image accessible for the function that appends the image to the page after the user assigns an email.</p>
                         <p>In case of the request failing through whatever incident, there is error handling present with a catch block which will return an error describing what happened.</p>

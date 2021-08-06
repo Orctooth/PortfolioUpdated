@@ -94,7 +94,7 @@ $hamburger-types: (
     z-index: 30;
     top:-7px;
     left:-8px;
-    background: #fff;
+    
     width: 100%;
     display: flex;
     align-items: center;
@@ -102,6 +102,7 @@ $hamburger-types: (
         display: block;
         & > .hamburger-box{
             display: block;
+            color: #33C1B8;
         }
     }
 }
@@ -211,27 +212,35 @@ $hamburger-types: (
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 100%;
     display: flex;
     margin: 0 0;
-    justify-content: center;
-    //margin-left: 15vw;
+    align-items: center;
+    
     
     & > .overlay{
         background: rgba(0,0,0,0.35);
         width: 100%;
         padding: 40px 30px;
-        padding-top: 150px;
-        padding-bottom: 30px;
-        
-        //position: relative;
+        // padding-top: 150px;
+        // padding-bottom: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
         & > .hero-image-text{
-            position: relative;
+            //position: relative;
             // top: 20vh;
             // left: 10%;
             text-align: center;
-            display: block;
-            //width: 80%;
-            margin: 30px auto;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0px auto;
             
             
             & > h1{
@@ -240,23 +249,6 @@ $hamburger-types: (
                 font-weight: 700;
                 color: #fff;
                 
-                @keyframes blink {
-                    from {
-                      opacity: 1;
-                    }
-                  
-                    to {
-                      opacity: 0;
-                    }
-                }
-                  
-                & > .typing{
-                    animation-duration: 0.5s;
-                    animation-timing-function: cubic-bezier(1,0,0,1);
-                    animation-name: blink;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                }
                 
             }
 
@@ -266,6 +258,7 @@ $hamburger-types: (
                 font-weight: 700;
                 color: #fff;
                 
+
             }
         }
         & > .scroll-down-link{
@@ -273,8 +266,8 @@ $hamburger-types: (
             margin: 0 auto;
             margin-bottom: 30px;
             text-align: center;
-            margin-top: 180px;
-            //align-self: flex-end;
+            margin-top: 50px;
+            align-self: flex-end;
             
             
             & > a{
@@ -384,7 +377,7 @@ $hamburger-types: (
                     position: relative;
                     z-index: -2;
                     border-radius: 3px;
-                    transition: box-shadow .3s, opacity .3s, transform .3s;
+                    transition: box-shadow .5s, transform .5s ease-out;
                 }
                 & > .pop-up{
                     visibility: hidden;
@@ -422,8 +415,8 @@ $hamburger-types: (
             &:hover{
                 & > .picture{
                     & > img{
-                        box-shadow: 5px 5px 10px 5px #aaa;
-                        opacity: 0.75;
+                        box-shadow: 5px 5px 10px 5px #33C1B8;
+                        
                         transform: scale(1.2);
                     }
                     & > .pop-up{
@@ -451,13 +444,20 @@ $hamburger-types: (
     display: flex;
     flex-direction: row;
     margin: 40px auto;
-    padding: 0 30px;
+    padding: 30px 30px;
+    background: #0D0225;
 
     & > .info-box{
         display: block;
         width: 30%;
+        word-wrap: break-word;
         & > *{
-            color: $purple-ish;
+            color: #fff;
+        }
+        & > h3 {
+            &>a{
+                text-decoration: underline;
+            }
         }
     }
     & > .form-box{
@@ -465,7 +465,6 @@ $hamburger-types: (
         width: 40%;
         margin-left: 0;
         //margin-right:0;
-        // (#¬_¬)
         & > form{
             
             & > div {
@@ -481,8 +480,9 @@ $hamburger-types: (
                 }
 
                 & > input{
-                    background: #ccc;
-                    border: none;
+                    background: $purple-ish;
+                    border: 1px solid white;
+                    color: #fff;
                     border-radius: 3px;
                     height: 50px;
                     width: 100%;
@@ -516,8 +516,9 @@ $hamburger-types: (
                     margin: 5px 0px !important;
                     padding: 15px 15px;
                     padding-bottom: 40px;
-                    background: #ccc;
-                    border: none;
+                    background: $purple-ish;
+                    color:#fff;
+                    border: 1px solid white;
                     width: 100%;
                     border-radius: 3px;
                     resize: none;
@@ -529,8 +530,9 @@ $hamburger-types: (
         }
         & > button{
             margin-left: 0px;
-            border: 1px solid $purple-ish;
-            color: $purple-ish;
+            border: 1px solid #fff;
+            color: #fff;
+            margin: 5px 0px;
             border-radius: 3px;
             height: 40px;
             width: 80px;
@@ -539,8 +541,8 @@ $hamburger-types: (
             vertical-align: center;
             background: none;
             &:hover{
-                background:$purple-ish;
-                color: #fff;
+                background:#fff;
+                color: $purple-ish;
             }
         }
     }
@@ -549,6 +551,7 @@ $hamburger-types: (
 
 .foot{
     display: flex;
+    background: $purple-ish;
     //margin-left: 15vw;
     @media screen and (-ms-high-contrast: active){
         //margin-left: 50vw;
@@ -562,12 +565,13 @@ $hamburger-types: (
             text-align: center;
             font-weight: 700;
             text-decoration: none;
+            color: #fff;
             & > i{
-                color: $purple-ish;
+                color: #fff;
                 transition: transform .3s;
             }
             & > p{
-                color: $purple-ish;
+                color: #fff;
             }
             &:hover{
                 & > i{
@@ -654,6 +658,13 @@ $hamburger-types: (
             text-decoration: underline;
             color: $blue-ish;
         }
+    }
+}
+
+.scs-block{
+    p a{
+        color: #33C1B8;
+        text-decoration: underline;
     }
 }
 
