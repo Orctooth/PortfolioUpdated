@@ -1,5 +1,7 @@
 // Hamburger
 // ==================================================
+$blue-ish: #33C1B8;
+
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
@@ -11,7 +13,7 @@
 
   // Normalize (<button>)
   font: inherit;
-  color: inherit;
+  color: $blue-ish;
   text-transform: none;
   background-color: transparent;
   border: 0;
@@ -28,6 +30,7 @@
   }
 
   &.is-active {
+    opacity: 0 !important;
     &:hover {
       @if $hamburger-hover-use-filter == true {
         filter: $hamburger-active-hover-filter;

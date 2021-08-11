@@ -22,20 +22,7 @@
         }
     }
 
-    .contact-form{
-        margin: 0 auto;
-        flex-wrap: wrap;
-        padding: 0 15px;
-        & > .info-box{
-            width: 100%;
-            margin: 0 auto;
-        }
-        & > .form-box{
-            width: 100%;
-            margin: 0 auto;
-            
-        }
-    }
+    
 
     .internal-section{
         & > .text-block{
@@ -107,6 +94,25 @@
         
     }
 }
+@media only screen and (max-width: 540px) {
+    .contact-form{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding: 0 15px;
+        & > .info-box{
+            width: 100%;
+            margin: 0 auto;
+
+        }
+        & > .form-box{
+            width: 100%;
+            margin: 0 auto;
+            
+        }
+    }
+    
+}
+
 @media only screen and (max-width: 785px){
     .hero-image, .contact-form, .foot, .internal-section{
         margin: 0 auto;
@@ -130,7 +136,7 @@
             display: block;
             margin-left: 0px;
         }
-        & > #last-name{
+        & > #last{
             margin-left: 0px !important;
         }
     }

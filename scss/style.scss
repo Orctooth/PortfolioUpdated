@@ -11,6 +11,7 @@ $purple-ish: #0D0225;
     a{
         text-decoration: none;
         color: inherit;
+        word-wrap: break-word;
     }
     ul{
         list-style: none;
@@ -55,11 +56,16 @@ html{
 
 body{
     padding: 0 auto;
+    margin: 0 0;
 }
 
 #main-content{
     margin-left: 180px;
     
+}
+
+#title{
+    word-wrap: break-word;
 }
 
 #my-page{
@@ -76,7 +82,7 @@ $hamburger-padding-y           : 8px !default;
 $hamburger-layer-width         : 32px !default;
 $hamburger-layer-height        : 3px !default;
 $hamburger-layer-spacing       : 4px !default;
-$hamburger-layer-color         : #fff !default;
+$hamburger-layer-color         : $blue-ish !important;
 $hamburger-layer-border-radius : 0px !default;
 $hamburger-hover-opacity       : 1 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;
@@ -94,17 +100,10 @@ $hamburger-types: (
     z-index: 30;
     top:-7px;
     left:-8px;
-    
     width: 100%;
-    display: flex;
-    align-items: center;
-    & > .hamburger{
-        display: block;
-        & > .hamburger-box{
-            display: block;
-            color: #33C1B8;
-        }
-    }
+    background: rgba(255,255,255,0);
+    
+    
 }
 .sticky-menu{
     width: 180px;
@@ -231,9 +230,7 @@ $hamburger-types: (
         justify-content: center;
         margin: 0 auto;
         & > .hero-image-text{
-            //position: relative;
-            // top: 20vh;
-            // left: 10%;
+            
             text-align: center;
             align-items: center;
             justify-content: center;
@@ -248,6 +245,7 @@ $hamburger-types: (
                 display: block;
                 font-weight: 700;
                 color: #fff;
+                width: 100%;
                 
                 
             }
@@ -457,6 +455,10 @@ $hamburger-types: (
         & > h3 {
             &>a{
                 text-decoration: underline;
+                transition: text-shadow .3s ease-out;
+                &:hover{
+                    text-shadow: 0px 1px 4px#fff;
+                }
             }
         }
     }
@@ -489,15 +491,20 @@ $hamburger-types: (
                     display: block;
                     margin: 5px 0px;
                     //padding: 30px 15px;
+                    transition: box-shadow .4s ease-out;
+                    box-shadow: 0px 0px 0px #fff;
+                    &:hover{
+                        box-shadow: 0px 1px 6px #fff;
+                    }
                    
                 }
-                & > #first-name{
+                & > #first{
                     
                     box-sizing: border-box;
                 }
-                & > #last-name{
+                & > #last{
                     
-                    margin-left: 5px;
+                    margin-left: 10px;
                     box-sizing: border-box;
                 }
                 & > #email, #subject{
@@ -522,29 +529,41 @@ $hamburger-types: (
                     width: 100%;
                     border-radius: 3px;
                     resize: none;
+                    transition: box-shadow .4s ease-out;
+                    box-shadow: 0px 0px 0px #fff;
+                    &:hover{
+                        box-shadow: 0px 1px 6px #fff;
+                    }
                 }
                 
+            }
+            & > button{
+                margin-left: 0px;
+                border: 1px solid #fff;
+                color: #fff;
+                margin: 0px 0px;
+                border-radius: 3px;
+                height: 40px;
+                width: 80px;
+                padding: 10px 15px;
+                text-align: center;
+                vertical-align: center;
+                background: none;
+                &:hover{
+                    background:#fff;
+                    color: $purple-ish;
+                    cursor: pointer;
+                }
+                transition: box-shadow .4s ease-out;
+                box-shadow: 0px 0px 0px #fff;
+                &:hover{
+                    box-shadow: 0px 1px 6px #fff;
+                }
             }
            
             
         }
-        & > button{
-            margin-left: 0px;
-            border: 1px solid #fff;
-            color: #fff;
-            margin: 5px 0px;
-            border-radius: 3px;
-            height: 40px;
-            width: 80px;
-            padding: 10px 15px;
-            text-align: center;
-            vertical-align: center;
-            background: none;
-            &:hover{
-                background:#fff;
-                color: $purple-ish;
-            }
-        }
+        
     }
     
 }
@@ -572,6 +591,11 @@ $hamburger-types: (
             }
             & > p{
                 color: #fff;
+                transition: box-shadow .4s ease-out;
+                text-shadow: 0px 0px 0px #fff;
+                &:hover{
+                    text-shadow: 0px 1px 4px #fff;
+                }
             }
             &:hover{
                 & > i{
@@ -653,19 +677,44 @@ $hamburger-types: (
 }
 
 .expand{
+    width: auto;
+    &> h3{
+        display: block;
+        width: 100%;
+    }
     &:hover{
-        h2{
+        h3{
             text-decoration: underline;
-            color: $blue-ish;
+            
         }
     }
 }
+
+
 
 .scs-block{
     p a{
         color: #33C1B8;
         text-decoration: underline;
     }
+}
+
+.alert-danger{
+    background-color: #d24d57;
+    color: #fff;
+}
+
+.alert-notice{
+    background-color: #25a25a;
+    color: #fff;
+}
+
+.alert{
+    padding: 20px 15px;
+    border-radius: 10px;
+    
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
 
 @import "media.scss";

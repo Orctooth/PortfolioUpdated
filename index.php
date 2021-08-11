@@ -17,6 +17,7 @@
         <!-- Hero-image background photo by <a href="https://unsplash.com/@didsss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Didssph</a> on <a href="https://unsplash.com/t/textures-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
     </head>
     <body>
+        
         <nav id="my-menu">
             <ul class="sticky-menu sticky-nav">
                 <li class="initials-box">
@@ -159,7 +160,7 @@
                     <div class="folio-card">
                         <a href="http://wordpress.harry-welchman.netmatters-scs.co.uk" class="folio-link" target="_blank">
                             <div class="picture">
-                                <img src="img/pankaj-patel-_SgRNwAVNKw-unsplash-min.jpg" alt="project-3" class="folio-thumb">
+                                <img src="img/cook-em-up.png" alt="project-3" class="folio-thumb">
                                 <div class="pop-up">
                                     <p>
                                         WordPress Reflection: <br><br>
@@ -236,19 +237,21 @@
                     </div>
         
                     <div class="form-box">
-                        <form>
+                    
+                        <form id="contact-form">
                             <div class="first-last">
-                                <input type="text" id="first-name" placeholder="First Name">
-                                <input type="text" id="last-name" placeholder="Last Name">
+                                <input type="text" id="first" placeholder="First Name*" name="first" required>
+                                <input type="text" id="last" placeholder="Last Name*" name="last" required>
                             </div>
                             <div class="inputs">
-                                <input type="email" id="email" placeholder="Email">
-                                <input type="text" id="subject" placeholder="Subject">
-                                <textarea id="message" placeholder="Message"></textarea>
+                                <input type="email" id="email" placeholder="Email*" name="email" required>
+                                <input type="text" id="subject" placeholder="Subject*" name="subject" required>
+                                <textarea id="message" placeholder="Message*" name="message" required></textarea>
                             </div>
+                            <button id ="submit" class="submit-btn" type="submit" value="Submit">Submit</button>
                             
                         </form>
-                        <button class="submit-btn">Submit</button>
+                        
         
                     </div>
                     
@@ -275,6 +278,7 @@
         <!-- <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> -->
         <script src="js/typewriter-core-dist.js"></script>
         <script src="js/main-dist.js"></script>
+        <script src="js/form-submit.js"></script>
         
     </body>
 </html>

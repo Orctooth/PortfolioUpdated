@@ -5,7 +5,7 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-.hamburger {
+ .hamburger {
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
@@ -30,20 +30,18 @@
 
 .hamburger-box {
   width: 40px;
-  height: 17px;
+  height: 24px;
   display: inline-block;
   position: relative; }
 
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: 8px;
-margin-left: 5px; }
+  margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #33C1B8;
-    color: #33C1B8;
+    background-color: #000;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
